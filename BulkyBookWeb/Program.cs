@@ -1,5 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
+
+//This is the DI Container Where All Services have to be attached.
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
