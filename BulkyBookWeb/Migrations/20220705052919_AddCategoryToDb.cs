@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BulkyBookWeb.Migrations
 {
-    public partial class AddCategoryToDatabase : Migration
+    public partial class AddCategoryToDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
