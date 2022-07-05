@@ -3,26 +3,41 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index Catagory</h1>
 
-<table class="table table-bordered table-striped table-hover style=" width="100%">
-    <thead>
-        <tr>
-            <th>Category Name</th>
-            <th>Display Order</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var obj in Model)
-        {
+@*p-3 is padding
+pt is padding Top*@
+<div class="container p-3">
+    <div class=" row">
+        <div class="col-6">
+            <h2 class="text-primary">CategoryList</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Category" asp-action="Create">
+               <i class="bi bi-plus-circle"></i> &nbsp; Create New Category
+            </a>
+        </div>
+
+    </div>
+    <br />
+    <table class="table table-bordered table-striped table-hover style=" width="100%">
+        <thead>
             <tr>
-                <td width="50%">
-                    @obj.Name
-                </td>
-                <td width="30%">
-                    @obj.DisplayOrder
-                </td>
+                <th>Category Name</th>
+                <th>Display Order</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td width="50%">
+                        @obj.Name
+                    </td>
+                    <td width="30%">
+                        @obj.DisplayOrder
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
